@@ -1,95 +1,39 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+
+import React from "react";
+import Navbar from "@/components/Navbar";
+import Landing from "@/components/Landing";
+import Menu from "@/components/Menu";
+import Iklan from "@/components/Iklan";
+import Promo from "@/components/Promo";
+import Ebook from "@/components/Ebook";
+import Artikel from "@/components/Artikel";
+import Video from "@/components/Video";
+import Footer from "@/components/Footer";
 
 export default function Home() {
+ 
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div className=" bg-white min-h-screen ">
+      <Navbar/>
+      <div className=" flex w-screen h-[664px]  bg-landingpage">
+      <Landing/></div>
+      <div className="container  mx-auto">
+      <Menu/></div>
+      <div className="  mx-auto bg-bg1 h-[650px] ">
+      <Promo/></div>
+      <div className="h-[550px] mx-auto">
+      <Artikel/></div>
+      <div className="  mx-auto bg-ebook ">
+      <Ebook/></div>
+  
+      <div className="h-[550px] bg-bg1 mx-auto">
+      <Video/></div>
+      <div className="container mx-auto">
+      <Iklan/></div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <div className="  h-[489px] mx-auto bg-ebook ">
+      <Footer/></div>
+    </div>
+    
   );
 }
